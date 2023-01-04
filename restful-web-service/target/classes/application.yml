@@ -1,0 +1,14 @@
+server:
+  port: 9999
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/boardtestdb
+    driver-class-name: org.postgresql.Driver
+    username: 'boardtest'
+    password: '00'
+
+
+logging:
+  level:
+    org.springframework: debug
