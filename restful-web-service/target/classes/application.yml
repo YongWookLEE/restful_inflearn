@@ -8,7 +8,11 @@ spring:
     username: 'boardtest'
     password: '00'
 
+  messages:
+    basename: messages
+
 
 logging:
   level:
     org.springframework: debug
+
