@@ -8,11 +8,41 @@ spring:
     username: 'boardtest'
     password: '00'
 
+  sql:
+    init:
+      mode: always
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    defer-datasource-initialization: true
+    database-platform: org.hibernate.dialect.PostgreSQL94Dialect
+    properties:
+      hibernate:
+        format_sql: true
+
+
+  security:
+    user:
+      name: username
+      password: passw0rd
+
   messages:
     basename: messages
+
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
 
 
 #logging:
 #  level:
 #    org.springframework: debug
 
+management:
+  endpoint:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
