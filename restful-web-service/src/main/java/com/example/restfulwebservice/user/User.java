@@ -1,5 +1,6 @@
 package com.example.restfulwebservice.user;
 
+import com.fasterxml.jackson.annotation.JsonFilter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import io.swagger.annotations.ApiModel;
@@ -31,6 +32,8 @@ import java.util.Date;
 @ApiModel(description = "사용자 상세 정보를 위한 도메인 객체")
 @Table(name = "Users")
 @Entity
+//@JsonIgnoreProperties(value = {"ssn"})
+//@JsonFilter("UserInfo")
 public class User {
     @Id
     @GeneratedValue
