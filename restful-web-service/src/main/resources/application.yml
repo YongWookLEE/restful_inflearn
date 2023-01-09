@@ -8,11 +8,26 @@ spring:
     username: 'boardtest'
     password: '00'
 
+  security:
+    user:
+      name: username
+      password: passw0rd
+
   messages:
     basename: messages
+
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
 
 
 logging:
   level:
     org.springframework: debug
 
+management:
+  endpoint:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
